@@ -44,7 +44,9 @@ claim-readiness-auditor/
 ├── SKILL.md                    # entry point: inputs, workflow, failure handling
 └── references/
     ├── scoring-rubric.md       # four 25-point checks, bands, actions, ranking
-    └── report-format.md        # dashboard and action list layout
+    ├── report-format.md        # dashboard and action list layout
+    ├── example-report.md       # sample report for a café (invented data)
+    └── disclosures.md          # data handling, permissions and limits
 ```
 
 The workflow delegates to the NAS's registered experts: `file-agent` (`ug-filesystem`), `document-agent` (`ug-document`), `photo-agent` (`ug-photo`) and `knowledge-agent` (`ug-knowledge`, only to save the report when the user asks). Every step is read-only except that optional save, which needs the user's approval.

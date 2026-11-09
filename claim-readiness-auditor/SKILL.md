@@ -15,6 +15,8 @@ This Skill is read-only by default. It never moves, renames, tags, deletes or ed
 
 The score measures how complete the evidence is. It is not insurance advice, and it does not predict whether an insurer will pay. Say this once in every report.
 
+When the user asks what the Skill can access, what it changes or how it handles their data, answer from [the disclosures](references/disclosures.md).
+
 # Required input
 
 Collect only the following. Ask in one message, and only for what is missing.
@@ -83,7 +85,7 @@ delegate --target document-agent --instruction 'Read-only task. Use only these p
 
 Score every asset with the four checks in [the scoring rubric and action guide](references/scoring-rubric.md): receipt, dated photo, serial number and coverage, worth 25 points each. Write a one-line diagnosis that names what is missing. Turn each missing or partial check into an action, then rank the actions as the rubric describes. If Step 2 returned a previous report, show each asset's score change since that run.
 
-Present the report in the layout from [the report format](references/report-format.md). Every number and finding must trace back to a real file returned by a step. Keep checks that could not run marked as "not checked", never as missing.
+Present the report in the layout from [the report format](references/report-format.md). [The example report](references/example-report.md) shows a finished sample built from invented data; use it for layout and tone only, never for content. Every number and finding must trace back to a real file returned by a step. Keep checks that could not run marked as "not checked", never as missing.
 
 ## Step 7: Save the report (optional)
 
