@@ -35,6 +35,30 @@ It's a Markdown-defined workflow (`SKILL.md`) that orchestrates native NAS capab
 4. Follow the Action List: photograph the serial number and save it. Re-run, and the score jumps to 75%.
 5. *"This claim would have failed. Now it won't."*
 
+## Skill package
+
+The Skill itself lives in [`claim-readiness-auditor/`](claim-readiness-auditor/). This is the folder that gets zipped and submitted.
+
+```
+claim-readiness-auditor/
+├── SKILL.md                    # entry point: inputs, workflow, failure handling
+└── references/
+    ├── scoring-rubric.md       # four 25-point checks, bands, actions, ranking
+    └── report-format.md        # dashboard and action list layout
+```
+
+The workflow delegates to the NAS's registered experts: `file-agent` (`ug-filesystem`), `document-agent` (`ug-document`), `photo-agent` (`ug-photo`) and `knowledge-agent` (`ug-knowledge`, only to save the report when the user asks). Every step is read-only except that optional save, which needs the user's approval.
+
+To check and package it with the Uliya Skill Kit:
+
+```bash
+node uliya-skill-kit/scripts/check-skill.mjs claim-readiness-auditor
+```
+
+```bash
+zip -r claim-readiness-auditor.zip claim-readiness-auditor
+```
+
 ## Status
 
 Built for the UGREEN AI NAS hackathon ("Automate Your Workflow" track).
